@@ -6,6 +6,13 @@ local util = require "lspconfig/util"
 local lspconfig = require "lspconfig"
 local servers = { "html", "cssls" }
 
+lspconfig.fsautocomplete.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  filetypes = { "fsharp" },
+  root_dir = util.root_pattern(".fsproj", "README.md", ".git"),
+}
+
 lspconfig.ocamllsp.setup {
   on_attach = on_attach,
   capabilities = capabilities,
@@ -96,7 +103,7 @@ lspconfig.omnisharp.setup {
   on_attach = on_attach,
   on_init = on_init,
   capabilities = capabilities,
-  filetypes = { "cs", "csharp"},
+  filetypes = { "cs", "csharp" },
 }
 
 lspconfig.pyright.setup {

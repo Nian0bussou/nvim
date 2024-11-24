@@ -25,6 +25,7 @@ M.ui = {
   mason = {
     cmd = true,
     pkgs = {
+      "fsautocomplete",
       "json-lsp",
       "ocaml-lsp",
       "deno",

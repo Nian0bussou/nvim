@@ -47,8 +47,11 @@ vim.api.nvim_create_user_command("RP", ":RMarkdown pdf", {})
 vim.api.nvim_create_user_command("RR", ":RMarkdown", {})
 -- vim.api.nvim_create_user_command("Ashtioen", ":Qwerty!", {})
 vim.api.nvim_create_user_command("SelectAll", ":normal ggVG", {})
+
 vim.keymap.set("n", "<leader>sa", "<CMD> SelectAll <CR>", { desc = "Select All"})
 
+vim.api.nvim_create_user_command("Scratchbuffer", ":e ~/scratch.md", { desc = "open scratch file"})
+vim.api.nvim_create_user_command("Chatgptprompt", ":e ~/chatprompt.md", { desc = "open chatgpt file"})
 
 -- --
 -- vim.api.nvim_create_augroup("RMarkdown", { clear = true })
